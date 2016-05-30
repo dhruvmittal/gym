@@ -2,25 +2,19 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Dhruv's Fantastic Flask Demo</title>
+		<title>Result!</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<!-- Add the thing to let my bokeh plots render as per slack advice --> 
 		<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.css" type="text/css" />
 		<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.js"></script>
-
-
+		{{b_s_|safe}}
 	</head>
 	<body>
 		<div>
-  			<h1>My fantastic flask demo.</h1>
-			<p> 
-				Enter a stock ticker symbol below. We'll do some shenanigans and give you a 
-				beautiful graph of the last month's closing prices for that company. <br />
-				I'd also like to thank <a href='https://www.quandl.com/'>Quandl</a>,
-				 for giving me this information for free! </br>
-			</p>
+  			<h1>It looks like you've requested {{symbol}}.</h1>
+			{{b_d_|safe}}
 			<form id="input" method="post" action="index">
 				<p> 
 					Please enter a stock ticker symbol: 
