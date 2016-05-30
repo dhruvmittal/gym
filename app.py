@@ -35,7 +35,7 @@ def doSomething():
 		payload = {'api_key':my_api_key, 'start_date':start_date, 'end_date':end_date, 'column_index':'4'}
 		try:
 			r = requests.get(api_addr + file_key, params=payload)
-			closes_df = pd.read_csv(io.StringIO(r.content.decode('utf-8')))
+			closes_df = pd.read_csv(io.StringIO(r.content.decode('utf-8'))).sort_index(by='Date')
 			plot = Line(closes_df, x='Date', y='Close', title='Close v. Date for ' + request.form['symbol'])
 			script, div = components(plot)
 			return result(request.form['symbol'], script, div)
