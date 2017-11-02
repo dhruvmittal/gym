@@ -2,37 +2,19 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Dhruv's Fantastic Flask Demo</title>
+		<title>Did An Go To The Gym Today</title>
+		<!--
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<!-- Add the thing to let my bokeh plots render as per slack advice --> 
-		<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.css" type="text/css" />
-		<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.js"></script>
-
-
+		-->
 	</head>
 	<body>
 		<div>
-  			<h1>My fantastic flask demo.</h1>
-			<p> 
-				Enter a stock ticker symbol below. We'll do some shenanigans and give you a 
-				beautiful graph of the last month's closing prices for that company. <br />
-				I'd also like to thank <a href='https://www.quandl.com/'>Quandl</a>,
-				 for giving me this information for free! </br>
-			</p>
-			<form id="input" method="post" action="index">
-				<p> 
-					Please enter a stock ticker symbol: 
-					<input type="text" name="symbol" />
-					<select name="timeframe">
-						<option value='one'>Last Month</option>
-						<option value='three'>Last 3 Months</option>
-						<option value='twelve'>Last Year</option>
-					</select>
-					<input type="submit" value="Go!" />
-				</p>
-			</form>
+			<h3>Did An Go To the Gym Today?</h3>
+			<h2> {{tweet_text}}</h2>
+			<br />
+			{{tweet_time}}
 		</div>
 	</body>
 </html>
