@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Did An Go To The Gym Today</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
 		<!--
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
@@ -10,11 +11,16 @@
 		-->
 	</head>
 	<body>
-		<div>
-			<h3>Did An Go To the Gym Today?</h3>
-			<h2> {{tweet_text}}</h2>
+		<div id="middle">
+			<p class="no"> {{tweet_text}}</p>
 			<br />
 			{{tweet_time}}
+		<p></p>
+		<p></p>
+		<div id="social">
+			<p id="twitter">
+			<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" title="Twitter Follow Button" src="http://platform.twitter.com/widgets/follow_button.c7112f7adf6a24ddcb78d834866e1439.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=DidAnGoToTheGym&amp;show_count=false&amp;show_screen_name=true&amp;size=m&amp;time=1509625425352" style="position: static; visibility: visible; width: 173px; height: 20px;" data-screen-name="DidAnGoToTheGym"></iframe>
+			</p>
 		</div>
 	</body>
 </html>
