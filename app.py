@@ -14,7 +14,7 @@ def main():
 @app.route('/index')
 def index():
     mrt = get_most_recent_tweet()  
-    return render_template('index.html', tweet_text=mrt.text, tweet_time=mrt.time)
+    return render_template('index.html', tweet_text=mrt['text'], tweet_time=mrt['timestamp'])
 
 
 def get_most_recent_tweet():
