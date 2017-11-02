@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-from twitterscraper import improt query_tweets
+from twitterscraper import query_tweets
 
 app = Flask(__name__)
 
